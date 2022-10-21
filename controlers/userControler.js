@@ -25,6 +25,6 @@ exports.addUser = function(req,res) {
     let newUser = new user(req.body);
     newUser.save((err, user) => {
         if (err) res.send(err);
-        res.json(users);
+        res.json(user);
     })
 };

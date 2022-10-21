@@ -5,7 +5,8 @@ const express = require("express"),
   (mongoose = require("mongoose")),
   (User = require("./models/UserModels"));
 
-mongoose.connect("mongodb://localhost/users_db");
-
+mongoose.connect("mongodb://127.0.0.1/user_db");
+app.use(express.json());
 routes(app);
+
 app.listen(port);
